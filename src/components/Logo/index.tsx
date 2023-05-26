@@ -57,7 +57,7 @@ function Logo() {
         <span className={style.inner}>call me</span>
       </span>
       <span className={style.bold}>
-        <span className={style.inner}>Giulio</span>
+        <span className={style.inner}>Aedotris</span>
       </span>
     </div>
   )
