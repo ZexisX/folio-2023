@@ -1,0 +1,122 @@
+{
+  "title": "Sketchin",
+  "image": "/projects/sk/hero.jpeg",
+  "live": "https://www.sketchin.com",
+  "role": "Full-stack developer",
+  "agency": "Sketchin",
+  "completed": "08.2020",
+  "awards": [],
+  "modules": [
+    {
+      "component": "TextIntro",
+      "text": "Sketchin is an advanced-design studio specialized in research and digital transformation. The project consists of the complete redesign of the institutional website. I was in charge of the full-stack development, automations and integration tests."
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-animation.mp4",
+          "alt": "Sketchin intro animation"
+        }
+      ]
+    },
+    {
+      "component": "TextTwoColumns",
+      "title": "The challenge",
+      "text": "Given the special circumstances, I and two other UX Engineers devoted time and attention to developing the institutional site between projects. We approached this challenge by abstracting UIs, following the logic of Atomic Design. We created a backlog containing cards of different natures that each could assign themselves as soon as the conditions were right<br /><br />We agreed from the beginning on conventions for writing code and documentation.",
+      "technologies": ["React", "Redux", "Next", "postcss", "Lambda"]
+    },
+
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-navi-1.jpg",
+          "alt": "Sketchin project filters"
+        },
+        {
+          "src": "/projects/sk/sk-navi-2.jpg",
+          "alt": "Sketchin menu navigation"
+        }
+      ]
+    },
+    {
+      "component": "TextTwoColumns",
+      "title": "Integration test",
+      "text": "Part of the time was spent writing automated tests that would prevent the most common disruptions. Failure of a contact form automatically sends an alert into a Slack channel, giving us the ability to take timely action.<br /><br />All forms (including navigation from the home to the contact page) are tested daily via CRONs running Gitlab pipelines.<br /><br />To ensure that all pages are generated correctly by returning content-rich HTML, Cypress tests are written and run directly in the deployment branch before it is published."
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sketchin-form-1.jpeg",
+          "alt": "Sketchin project filters"
+        },
+        {
+          "src": "/projects/sk/sketchin-form-2.jpeg",
+          "alt": "Sketchin menu navigation"
+        }
+      ]
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-hero.jpg",
+          "alt": "Sketchin services page"
+        }
+      ]
+    },
+    {
+      "component": "TextTwoColumns",
+      "title": "Automations",
+      "text": "Through Lambda function, it was possible to use the Favro API (the project management tool used in Sketchin) to automatically create and detail cards so that they could be used by the respective units without spending effort on data entry."
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-animation-2.mp4",
+          "alt": "Intro animation"
+        }
+      ]
+    },
+    {
+      "component": "TextTwoColumns",
+      "title": "A modular front-end",
+      "text": "To address the need to be able to create ever-changing editorial content, we used Prismic CMS's Slice Machine. This feature allows infinite data models to be associated with respective React components.<br />The editor can compose pages with the number of slices (models) he needs and in the order he prefers. The frontend reads the models and returns the correct React components.",
+      "numbers": [
+        {
+          "value": "50+",
+          "label": "Available slices"
+        },
+        {
+          "value": "6",
+          "label": "Months of development"
+        },
+        {
+          "value": "10+",
+          "label": "Designers of Sketchin"
+        }
+      ]
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-cards.jpg",
+          "alt": "Sketchin projects page"
+        }
+      ]
+    },
+    {
+      "component": "Media",
+      "media": [
+        {
+          "src": "/projects/sk/sk-hero-2.jpg",
+          "alt": "Sketchin projects page"
+        }
+      ]
+    }
+  ]
+}
