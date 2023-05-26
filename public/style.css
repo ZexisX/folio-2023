@@ -23,6 +23,10 @@
 html, body {
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 // helper
 .center-xy {
