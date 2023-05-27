@@ -619,7 +619,7 @@ export default class Title {
 
   update() {
     // Animations
-    // if (this.settings.text === 'TCMG' && this.mesh) {
+    // if (this.settings.text === 'TCMA' && this.mesh) {
     //   console.log('upda', this.mesh.position.y)
     // }
   }
