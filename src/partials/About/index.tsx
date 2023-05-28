@@ -1,4 +1,4 @@
-import React from 'react';
+import style from './index.module.css';
 
 // Components
 import Section from 'components/Section';
@@ -12,12 +12,10 @@ import { List, ListItem } from 'components/List';
 // Hooks
 import { Trans, useTranslation } from 'react-i18next';
 
-import style from './index.module.css';
-
 function About() {
   const { t } = useTranslation('translation', { keyPrefix: 'about' });
   const intro: string[] = t('intro', { returnObjects: true });
-  const clanTitle: string = t('clan_title');
+  const clanTitle: string[] = t('clan_title', { returnObjects: true });
   const clan: string[] = t('clan', { returnObjects: true });
   const methodTitle: string = t('method_title');
   const method: string[] = t('method', { returnObjects: true });
@@ -177,28 +175,28 @@ function About() {
           <ContentBlock>
             <List>
               {awwwardsEndValues.map((endValue, index) => (
-                <ListItem key={index} end={endValue}>
+                <ListItem key={index.toString()} end={endValue}>
                   Awwwards
                 </ListItem>
               ))}
               {cssDesignAwardsEndValues.map((endValue, index) => (
-                <ListItem key={index} end={endValue}>
+                <ListItem key={index.toString()} end={endValue}>
                   CSS Design Awards
                 </ListItem>
               ))}
               {fwaEndValues.map((endValue, index) => (
-                <ListItem key={index} end={endValue}>
+                <ListItem key={index.toString()} end={endValue}>
                   FWA
                 </ListItem>
               ))}
               {ifDesignAwardEndValues.map((endValue, index) => (
-                <ListItem key={index} end={endValue}>
+                <ListItem key={index.toString()} end={endValue}>
                   iF Design Award
                 </ListItem>
               ))}
               {otherEndValues.map((endValue, index) => (
-                <ListItem key={index} end={endValue}>
-                  Other
+                <ListItem key={index.toString()} end={endValue}>
+                  {t(`about.other.${index}`)}
                 </ListItem>
               ))}
             </List>
