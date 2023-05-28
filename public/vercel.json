@@ -2,17 +2,7 @@
   "rewrites": [
     {
       "source": "/public/:file*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ],
-      "destination": "/public/:file*"
-    },
-    {
-      "source": "/public/(.*)",
-      "status": 403
+      "destination": "/404.html"
     }
   ]
 }
