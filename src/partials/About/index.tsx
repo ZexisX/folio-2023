@@ -1,3 +1,4 @@
+import React from 'react';
 import style from './index.module.css';
 
 // Components
@@ -20,12 +21,9 @@ function About() {
   const methodTitle: string = t('method_title');
   const method: string[] = t('method', { returnObjects: true });
 
-function increaseEndValue(startValue: number, count: number): React.ReactNode[] {
-  return Array.from({ length: count }, (_, index) => (
-    <React.Fragment key={index}>x{startValue + index}</React.Fragment>
-  ));
+function increaseEndValue(startValue: number, count: number): string[] {
+  return Array.from({ length: count }, (_, index) => `x${startValue + index}`);
 }
-
 
   const awwwardsEndValues: string[] = increaseEndValue(6, 1029);
   const cssDesignAwardsEndValues: string[] = increaseEndValue(6, 581);
@@ -177,41 +175,31 @@ function increaseEndValue(startValue: number, count: number): React.ReactNode[] 
         <Row start={1} end={3}>
           <ContentBlock>
 <List>
-  <React.Fragment>
-    {awwwardsEndValues.map((endValue, index) => (
-      <ListItem key={index} end={endValue}>
-        Awwwards
-      </ListItem>
-    ))}
-  </React.Fragment>
-  <React.Fragment>
-    {cssDesignAwardsEndValues.map((endValue, index) => (
-      <ListItem key={index} end={endValue}>
-        CSS Design Awards
-      </ListItem>
-    ))}
-  </React.Fragment>
-  <React.Fragment>
-    {fwaEndValues.map((endValue, index) => (
-      <ListItem key={index} end={endValue}>
-        FWA
-      </ListItem>
-    ))}
-  </React.Fragment>
-  <React.Fragment>
-    {ifDesignAwardEndValues.map((endValue, index) => (
-      <ListItem key={index} end={endValue}>
-        iF Design Award
-      </ListItem>
-    ))}
-  </React.Fragment>
-  <React.Fragment>
-    {otherEndValues.map((endValue, index) => (
-      <ListItem key={index} end={endValue}>
-        Other
-      </ListItem>
-    ))}
-  </React.Fragment>
+  {awwwardsEndValues.map((endValue, index) => (
+    <ListItem key={index} end={`${endValue}`}>
+      Awwwards
+    </ListItem>
+  ))}
+  {cssDesignAwardsEndValues.map((endValue, index) => (
+    <ListItem key={index} end={`${endValue}`}>
+      CSS Design Awards
+    </ListItem>
+  ))}
+  {fwaEndValues.map((endValue, index) => (
+    <ListItem key={index} end={`${endValue}`}>
+      FWA
+    </ListItem>
+  ))}
+  {ifDesignAwardEndValues.map((endValue, index) => (
+    <ListItem key={index} end={`${endValue}`}>
+      iF Design Award
+    </ListItem>
+  ))}
+  {otherEndValues.map((endValue, index) => (
+    <ListItem key={index} end={`${endValue}`}>
+      Other
+    </ListItem>
+  ))}
 </List>
           </ContentBlock>
         </Row>
