@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function redirect() {
   if (!isRedirecting) {
     isRedirecting = true;
-    window.location.href = 'http://levinhkhang.xyz/';
+    window.location.href = 'http://levinhkhang.xyz/404';
   }
 }
 
