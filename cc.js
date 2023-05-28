@@ -1,16 +1,7 @@
 var isRedirecting = false;
 
 document.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key === 's' && !isRedirecting) {
-    event.preventDefault();
-    redirect();
-  } else if (event.ctrlKey && event.key === 'u' && !isRedirecting) {
-    event.preventDefault();
-    redirect();
-  } else if (event.ctrlKey && event.key === 'i' && !isRedirecting) {
-    event.preventDefault();
-    redirect();
-  } else if (event.key === 'F12' && !isRedirecting) {
+  if ((event.ctrlKey || event.metaKey) && (event.key === 's' || event.key === 'u' || event.key === 'i' || event.key === 'F12') && !isRedirecting) {
     event.preventDefault();
     redirect();
   }
@@ -36,9 +27,9 @@ function redirect() {
   }
 }
 
-// Chặn sự kiện mặc định của trình duyệt cho các phím tắt khác (trừ Ctrl + S)
+// Chặn sự kiện mặc định của trình duyệt cho các phím tắt khác (trừ Ctrl + S, Ctrl + U, Ctrl + I và F12)
 document.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key === 's', 'u', 'i', 'F12') {
+  if ((event.ctrlKey || event.metaKey) && (event.key === 's' || event.key === 'u' || event.key === 'i' || event.key === 'F12')) {
     return;
   }
   event.preventDefault();
