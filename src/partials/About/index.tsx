@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement, ReactNode, JSXElementConstructor } from 'react';
 import style from './index.module.css';
 
 // Components
@@ -175,31 +175,31 @@ function increaseEndValue(startValue: number, count: number): string[] {
         <Row start={1} end={3}>
           <ContentBlock>
 <List>
-  {awwwardsEndValues.map((endValue, index) => (
+  {(awwwardsEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       Awwwards
     </ListItem>
-  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
-  {cssDesignAwardsEndValues.map((endValue, index) => (
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[])}
+  {(cssDesignAwardsEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       CSS Design Awards
     </ListItem>
-  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
-  {fwaEndValues.map((endValue, index) => (
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[])}
+  {(fwaEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       FWA
     </ListItem>
-  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
-  {ifDesignAwardEndValues.map((endValue, index) => (
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[])}
+  {(ifDesignAwardEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       iF Design Award
     </ListItem>
-  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
-  {otherEndValues.map((endValue, index) => (
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[])}
+  {(otherEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       Other
     </ListItem>
-  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[])}
 </List>
           </ContentBlock>
         </Row>
