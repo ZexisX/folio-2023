@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function redirect() {
   if (!isRedirecting) {
     isRedirecting = true;
-    window.location.href = 'http://levinhkhang.xyz/404';
+    window.location.href = 'http://levinhkhang.xyz/';
   }
 }
 
@@ -32,5 +32,10 @@ document.addEventListener('keydown', function(event) {
   if ((event.ctrlKey || event.metaKey) && (event.key === 's' || event.key === 'u' || event.key === 'i' || event.key === 'F12')) {
     return;
   }
+  event.preventDefault();
+});
+
+// Chặn sự kiện click chuột phải
+document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
 });
