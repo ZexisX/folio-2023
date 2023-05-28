@@ -1,7 +1,7 @@
 {
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/(?!404.html).*",
       "status": 403,
       "headers": {
         "Cache-Control": "no-store"
