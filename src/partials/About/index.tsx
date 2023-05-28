@@ -20,9 +20,9 @@ function About() {
   const methodTitle: string = t('method_title');
   const method: string[] = t('method', { returnObjects: true });
 
-  const increaseEndValue = (startValue: number, count: number): string[] => {
-    return Array.from({ length: count }, (_, index) => `x${startValue + index}`);
-  };
+function increaseEndValue(startValue: number, count: number): number[] {
+  return Array.from({ length: count }, (_, index) => startValue + index);
+}
 
   const awwwardsEndValues: string[] = increaseEndValue(6, 1029);
   const cssDesignAwardsEndValues: string[] = increaseEndValue(6, 581);
