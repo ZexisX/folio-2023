@@ -22,3 +22,11 @@ document.addEventListener('contextmenu', function(event) {
   event.preventDefault(); // Ngăn chặn hiển thị menu ngữ cảnh mặc định
   window.location.href = 'http://levinhkhang.xyz/404'; // Điều hướng đến URL khác
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var currentUrl = window.location.href.toLowerCase();
+  
+  if (currentUrl === 'view-source:https://levinhkhang.xyz/' || currentUrl === 'view-source:https://levinhkhang.xyz') {
+    window.location.href = 'https://levinhkhang.xyz/404';
+  }
+});
