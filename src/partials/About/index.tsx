@@ -20,8 +20,8 @@ function About() {
   const methodTitle: string = t('method_title');
   const method: string[] = t('method', { returnObjects: true });
 
-function increaseEndValue(startValue: number, count: number): number[] {
-  return Array.from({ length: count }, (_, index) => startValue + index);
+function increaseEndValue(startValue: number, count: number): string[] {
+  return Array.from({ length: count }, (_, index) => `x${startValue + index}`);
 }
 
   const awwwardsEndValues: string[] = increaseEndValue(6, 1029);
@@ -173,33 +173,33 @@ function increaseEndValue(startValue: number, count: number): number[] {
       <Container grid>
         <Row start={1} end={3}>
           <ContentBlock>
-            <List>
-              {awwwardsEndValues.map((endValue, index) => (
-                <ListItem key={index.toString()} end={endValue}>
-                  Awwwards
-                </ListItem>
-              ))}
-              {cssDesignAwardsEndValues.map((endValue, index) => (
-                <ListItem key={index.toString()} end={endValue}>
-                  CSS Design Awards
-                </ListItem>
-              ))}
-              {fwaEndValues.map((endValue, index) => (
-                <ListItem key={index.toString()} end={endValue}>
-                  FWA
-                </ListItem>
-              ))}
-              {ifDesignAwardEndValues.map((endValue, index) => (
-                <ListItem key={index.toString()} end={endValue}>
-                  iF Design Award
-                </ListItem>
-              ))}
-              {otherEndValues.map((endValue, index) => (
-                <ListItem key={index.toString()} end={endValue}>
-                  {t(`about.other.${index}`)}
-                </ListItem>
-              ))}
-            </List>
+<List>
+  {awwwardsEndValues.map((endValue, index) => (
+    <ListItem key={index} end={endValue.toString()}>
+      Awwwards
+    </ListItem>
+  ))}
+  {cssDesignAwardsEndValues.map((endValue, index) => (
+    <ListItem key={index} end={endValue.toString()}>
+      CSS Design Awards
+    </ListItem>
+  ))}
+  {fwaEndValues.map((endValue, index) => (
+    <ListItem key={index} end={endValue.toString()}>
+      FWA
+    </ListItem>
+  ))}
+  {ifDesignAwardEndValues.map((endValue, index) => (
+    <ListItem key={index} end={endValue.toString()}>
+      iF Design Award
+    </ListItem>
+  ))}
+  {otherEndValues.map((endValue, index) => (
+    <ListItem key={index} end={endValue.toString()}>
+      Other
+    </ListItem>
+  ))}
+</List>
           </ContentBlock>
         </Row>
       </Container>
