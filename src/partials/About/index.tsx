@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import style from './index.module.css';
 
 // Components
@@ -179,27 +179,27 @@ function increaseEndValue(startValue: number, count: number): string[] {
     <ListItem key={index} end={`${endValue}`}>
       Awwwards
     </ListItem>
-  ))}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
   {cssDesignAwardsEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       CSS Design Awards
     </ListItem>
-  ))}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
   {fwaEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       FWA
     </ListItem>
-  ))}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
   {ifDesignAwardEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       iF Design Award
     </ListItem>
-  ))}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
   {otherEndValues.map((endValue, index) => (
     <ListItem key={index} end={`${endValue}`}>
       Other
     </ListItem>
-  ))}
+  )) as ReactElement<any, string | JSXElementConstructor<any>>[]}
 </List>
           </ContentBlock>
         </Row>
