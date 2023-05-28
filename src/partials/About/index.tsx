@@ -1,4 +1,4 @@
-import style from './index.module.css';
+import React from 'react';
 
 // Components
 import Section from 'components/Section';
@@ -11,6 +11,8 @@ import { List, ListItem } from 'components/List';
 
 // Hooks
 import { Trans, useTranslation } from 'react-i18next';
+
+import style from './index.module.css';
 
 function About() {
   const { t } = useTranslation('translation', { keyPrefix: 'about' });
